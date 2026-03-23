@@ -38,33 +38,3 @@ test('Partially Update Post with ID 12 using PATCH and Validate Full Object', as
 
 
 
-
-
-
-
-
-
-/*
-Notes:
-- PATCH updates only specified fields but keeps other fields intact.
-- JSONPlaceholder returns the full object with updated fields.
-- We validate that title is updated and other fields remain present.
-
-Assignments:
-1. Try sending only `body` in the payload and validate that `title` and `userId` are still present.
-2. Add an assertion that `Object.keys(jsonData)` contains `['id', 'title', 'body', 'userId']`.
-3. Print all keys present in the response using `Object.keys(jsonData)`.
-
-Quiz:
-Q1. Which method updates only specified fields without replacing the entire resource?
-A. PUT
-B. PATCH
-C. POST
-D. DELETE
-Correct Answer: B
-Explanation: PATCH updates partial data while keeping other fields intact.
-
-Interview Questions:
-Q1. How does PATCH differ from PUT in terms of behavior?
-Answer: PUT replaces the entire resource, while PATCH updates only specified fields and retains others.
-*/

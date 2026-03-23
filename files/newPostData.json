@@ -1,0 +1,6 @@
+{
+    "id": 12,
+    "title": "Updated Post Title",
+    "body": "This post has been updated using Playwright PUT request",
+    "userId": 2
+}

@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test';
 
+
 test('Correlation Example: Fetch userId from one post and use it in next request', async ({ request }) => {
 
     // Step 1: Fetch a single post by ID

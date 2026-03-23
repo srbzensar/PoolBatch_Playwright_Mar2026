@@ -1,5 +1,8 @@
 // @ts-check
 import { defineConfig, devices } from '@playwright/test';
+import dotenv from 'dotenv'; // install library command: npm install dotenv
+
+dotenv.config();
 
 /**
  * Read environment variables from file.

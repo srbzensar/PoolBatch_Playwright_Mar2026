@@ -1,0 +1,17 @@
+[
+  {
+    "title": "First Post - DDT",
+    "body": "This is the first post created via DDT",
+    "userId": 1
+  },
+  {
+    "title": "Second Post - DDT",
+    "body": "This is the second post created via DDT",
+    "userId": 2
+  },
+  {
+    "title": "Third Post - DDT",
+    "body": "This is the third post created via DDT",
+    "userId": 3
+  }
+]
