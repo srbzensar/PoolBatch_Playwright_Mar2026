@@ -36,6 +36,8 @@ export default defineConfig({
     trace: 'on-first-retry',
     ignoreHTTPSErrors: true, // applies to BrowserContext + APIRequestContext in tests
 
+    // headless: false,  // run tests in headed mode (with browser UI)
+    slowMo: 1000,       // slow down test execution by 1000ms to see the actions in real-time (useful for debugging)
   },
 
   /* Configure projects for major browsers */
