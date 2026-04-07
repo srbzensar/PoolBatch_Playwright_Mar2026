@@ -23,6 +23,9 @@ screenshots/
 # Playwright cache
 .playwright/
 
+# auth
+playwright/.auth/
+
 # ===============================
 # Environment files
 # ===============================
