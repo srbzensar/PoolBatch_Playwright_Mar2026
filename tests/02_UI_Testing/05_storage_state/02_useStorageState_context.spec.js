@@ -1,6 +1,6 @@
 const { test, expect } = require('@playwright/test');
 
-test.only('Access secure page using stored login state and browser fixture', async ({ browser }) => {
+test('Access secure page using stored login state and browser fixture', async ({ browser }) => {
   const context = await browser.newContext({
     storageState: 'playwright/.auth/loginState.json',
   });
@@ -25,7 +25,7 @@ test.describe('role based tests', () => {
   storageState: 'playwright/.auth/loginState.json'
   });
 
-  test('Access secure page, use with test', async ({ page }) => 
+  test.only('Access secure page, use with test', async ({ page }) => 
   {
     // Directly open secured URL (no login)
     await page.goto('https://practice.expandtesting.com/secure');

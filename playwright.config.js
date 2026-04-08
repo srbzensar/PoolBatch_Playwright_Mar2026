@@ -41,7 +41,12 @@ export default defineConfig({
   },
 
   /* Configure projects for major browsers */
-  projects: [
+  projects: [ 
+    {
+      name: 'setup',
+      testMatch: /auth\.setup\.js/,
+    },
+
     // {
     //   name: 'chromium',
     //   use: { ...devices['Desktop Chrome'] },
@@ -76,6 +81,12 @@ export default defineConfig({
       name: 'Google Chrome',
       use: { ...devices['Desktop Chrome'], channel: 'chrome' },
     },
+    // // useful for configuration of storage state 
+    // {
+    //   name: 'Google Chrome',
+    //   dependencies: ['setup'], // runs after setup
+    //   use: { ...devices['Desktop Chrome'], channel: 'chrome', storageState: process.env.STORAGE_STATE_PATH },
+    // },
   ],
 
   /* Run your local dev server before starting the tests */
