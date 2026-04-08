@@ -10,7 +10,8 @@ test('Yahoo Login using POM with login() method', async ({ page }) => {
     const loginPage = new LoginPage(page);
 
     await loginPage.navigate(url);
-    await expect(page).toHaveTitle(/Yahoo/i);
+    const actualTitle = await loginPage.getTitle();
+    expect(actualTitle).toMatch(/Yahoo/i);
 
     // Single method for login
     await loginPage.login(userId, password);
@@ -18,7 +19,7 @@ test('Yahoo Login using POM with login() method', async ({ page }) => {
     const currentUrl = await loginPage.getCurrentUrl();
     console.log("URL after login:", currentUrl);
 
-    await expect(currentUrl).toMatch(/login\.yahoo\.com|yahoo\.com/);
+    expect(currentUrl).toMatch(/login\.yahoo\.com|yahoo\.com/);
 
     await page.close();
 });

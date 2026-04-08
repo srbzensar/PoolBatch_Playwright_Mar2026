@@ -23,6 +23,10 @@ export class LoginPage {
         await this.page.waitForLoadState('networkidle');
     }
 
+    async getTitle() {
+        return this.page.title();
+    }
+
     async getCurrentUrl() {
         return this.page.url();
     }
